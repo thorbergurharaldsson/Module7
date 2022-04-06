@@ -21,6 +21,13 @@ Monorepo - should we be using them?
 
 - [What is monorepo? (and should you use it) - in-depth article about monorepos](https://semaphoreci.com/blog/what-is-monorepo)
 - [Misconceptions about Monorepos: Monorepo != Monolith - Article](https://blog.nrwl.io/misconceptions-about-monorepos-monorepo-monolith-df1250d4b03c)
+- [Monorepos: Please don’t!](https://medium.com/@mattklein123/monorepos-please-dont-e9a279be011b)
+- [Monorepo is a bad idea](https://alexey-soshin.medium.com/monorepo-is-a-bad-idea-5e587e848a07)
+- [Why You Should Use a Monorepo (and Why You Shouldn’t)](https://lembergsolutions.com/blog/why-you-should-use-monorepo-and-why-you-shouldnt)
+- [The issue with Monorepos](https://www.squash.io/the-issue-with-monorepos/)
+- [Should You Use a Monorepo?](https://www.cloudsavvyit.com/11584/should-you-use-a-monorepo/)
+- [The case against monorepos](https://www.infoworld.com/article/3638860/the-case-against-monorepos.html)
+- [Why don’t you have a monorepo?](https://www.works-hub.com/learn/why-dont-you-have-a-monorepo-421ed)
 
 #### Videos
 
