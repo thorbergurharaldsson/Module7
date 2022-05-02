@@ -56,7 +56,7 @@ In-depth about the sources used in this project can be found in the [Sources.md]
 
 ### **Minimum Viable Product (MVP)**
 
-- Written article about pros/cons of monorepos
+- Written article about monorepos
 - Understand when to use them and when not to
 - Understand the difference between the different choices
-- Be able to set up a boilerplate monorepo utilizing the advantages of monorepos.
+- Be able to set up a boilerplate monorepo utilizing the advantages of monorepos. (Video)
