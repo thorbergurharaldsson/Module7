@@ -29,7 +29,7 @@ Now let's create two react application, you can call them what ever you want but
 
 Next we will create an api using express
 
-First we need to install express using: `npm install --save-dev @nrwl/express`
+First we need to install express using: `npm install @nrwl/express`
 
 Then we can generate the application `npx nx g @nrwl/express:app api`
 
@@ -47,33 +47,7 @@ Next let's generate a library for utils that we can also use throughout the repo
 
 Now the monorepo is setup ready for us to start coding.
 
-### 4. Serving the applications
-
-Since both react apps are served on the same port by default we need to edit the project.json in the web2 folder and add "port": 4201 to the serve > options like this:
-
-```
-"serve": {
-  "executor": "@nrwl/web:dev-server",
-  "options": {
-    "buildTarget": "web2:build",
-    "hmr": true,
-    "port": 4201
-  },
-  "configurations": {
-    "production": {
-      "buildTarget": "web2:build:production",
-      "hmr": false
-    }
-  }
-}
-```
-
-We can serve individual applications by using the `npx nx serve web1` command or serve multiple or all applications at once using the run-many command like this:
-`npx nx run-many --target=serve --all`
-
-I will use the run-many command to run everything at once
-
-### 5. Creating a react component
+### 4. Creating a react component
 
 Now the monorepo is setup and we can start developing. I will type `code .` in the terminal to open vs code in the current directory
 
@@ -91,7 +65,7 @@ We also need to export it from the shared-components library, we do this in the 
 
 Add this line: `export * from "./lib/foo"`
 
-### 6. Using the component
+### 5. Using the component
 
 Now let's use the component in the web apps we have, let's navigate to apps > web1 > src > app > app.tsx
 
@@ -117,6 +91,32 @@ export default App;
 ```
 
 Now let's do the same for web2
+
+### 6. Serving the applications
+
+Since both react apps are served on the same port by default we need to edit the project.json in the web2 folder and add "port": 4201 to the serve > options like this:
+
+```
+"serve": {
+  "executor": "@nrwl/web:dev-server",
+  "options": {
+    "buildTarget": "web2:build",
+    "hmr": true,
+    "port": 4201
+  },
+  "configurations": {
+    "production": {
+      "buildTarget": "web2:build:production",
+      "hmr": false
+    }
+  }
+}
+```
+
+We can serve individual applications by using the `npx nx serve web1` command or serve multiple or all applications at once using the run-many command like this:
+`npx nx run-many --target=serve --all`
+
+I will use the run-many command to run everything at once
 
 ### 7. Viewing the dependancy graph
 
