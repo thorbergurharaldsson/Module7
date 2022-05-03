@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Module 7 - Monorepo</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/night.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Intro slide -->
+        <section>
+          <h1>Monorepo</h1>
+          <h3>Module 7 - Further Exploration</h3>
+          <p>Þorbergur Haraldsson</p>
+        </section>
+
+        <!--  -->
+        <section>
+          <section>
+            <h2>What is a monorepo</h2>
+            <p>
+              A monorepo is a single repository containing multiple distinct
+              projects, with well-defined relationships.
+            </p>
+            <img src="./img/Monorepo.png" />
+          </section>
+          <section>
+            <h2>What is a polyrepo</h2>
+            <p>
+              A polyrepo is the current standard way of developing applications:
+              a repo for each team, application, or project.
+            </p>
+            <img src="./img/Polyrepo.png" />
+          </section>
+
+          <aside class="notes">
+            Monorepo: In the diagram we can see that everything in the
+            repository is easily accessible throughout the codebase. everything
+            uses the same version of each dependancy so you never have to worry
+            about versioning. Polyrepo: In the diagram we can see that the code
+            is split up into multiple repositories.
+          </aside>
+        </section>
+        <section>
+          <h2>Why is a monorepo useful</h2>
+          <ul>
+            <li class="fragment">Shared libaries of code</li>
+            <li class="fragment">Simplified dependency management</li>
+            <li class="fragment">
+              Better visibility and collaboration across teams
+            </li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>
+                If there is common code or a dependency that has to be used in
+                different projects, we can easily share them between projects
+                and work on them without having to worry about problems
+                regarding versioning.
+              </li>
+              <li>
+                Monorepos can help simplify internal and third-party dependency
+                management. Referenced dependencies all exist in the same code
+                base, which helps address challenges like the diamond dependency
+                problem and the concern of having multiple projects with
+                multiple versions of the same dependency. I will talk more about
+                the diamond dependancy problem in the next slide.
+              </li>
+              <li></li>
+            </ul>
+          </aside>
+        </section>
+
+        <!-- Diamond dependancy problem -->
+        <section>
+          <h2>The Diamond dependancy problem</h2>
+          <img src="./img/DiamondDepProb.png" />
+        </section>
+        <section>
+          <h2>Large monorepos</h2>
+          <p>
+            Some companies host all their code in a single repository, shared
+            among everyone. Monorepos can reach colossal sizes, for example:
+          </p>
+
+          <ul>
+            <li class="fragment">
+              <p>Googles monorepo <span class="fragment">86tb</span></p>
+            </li>
+            <li class="fragment">
+              <p>
+                Microsofts Windows monorepo <span class="fragment">300GB</span>
+              </p>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
