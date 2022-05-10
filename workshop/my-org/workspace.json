@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "shared-components": "libs/shared-components",
+    "utils": "libs/utils",
+    "web1": "apps/web1",
+    "web1-e2e": "apps/web1-e2e",
+    "web2": "apps/web2",
+    "web2-e2e": "apps/web2-e2e"
+  }
+}

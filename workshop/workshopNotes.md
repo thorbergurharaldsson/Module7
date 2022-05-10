@@ -29,7 +29,7 @@ Now let's create two react application, you can call them what ever you want but
 
 Next we will create an api using express
 
-First we need to install express using: `npm install @nrwl/express`
+First we need to install express using: `npm install @nrwl/expres`
 
 Then we can generate the application `npx nx g @nrwl/express:app api`
 
